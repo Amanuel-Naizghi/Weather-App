@@ -137,4 +137,12 @@ body{
 .content>.body>.weekly-info>div{
     display:flex;
     height:117px;
+    justify-content: space-between;
+}
+.content>.body>.weekly-info .rain-percent-container{
+    display:flex;
+}
+.content>.body>.weekly-info>div>.img-container>img{
+    width:50px;
+    height:50px;
 }

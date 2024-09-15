@@ -17,19 +17,46 @@ function getCurrentDayInfo(dateInfo){
     let month=dayData.getMonth()+1;
     let year=dayData.getFullYear();
 
-    let getActualDay=()=>{
+    let getActualDayMonthYear=()=>{
         const date=new Date(year,month-1,day);
         const options={year:'numeric',month:'long',day:'numeric'}
         return date.toLocaleString('en-US',options);
-    }
+    };
+
+    let getActualDayMonth=()=>{
+        const date=new Date(year,month-1,day);
+        const options={year:'numeric',month:'long',day:'numeric'}
+        return date.toLocaleString('en-US',options);
+    };
 
     let getDayName=()=>{
         const date=new Date(dateInfo);
         return date.toLocaleString('en-US',{weekday:'long'});
+    };
+
+    return{getDayName,getActualDayMonthYear,getActualDayMonth};
+}
+
+function timeFormatter(time){
+    let myTime=time.slice(0,5);
+    let myHour=myTime.slice(0,2);
+    let myMinute=myTime.slice(3,5);
+    let timeIndicator;
+
+    if(myHour>12){
+        myHour-=12;
+        timeIndicator="Pm";
+    }
+    else if(myHour==='12'){
+        timeIndicator='Pm';
+    }
+    else{
+        timeIndicator='Am';
     }
 
-    return{getDayName,getActualDay};
+    let myNewTime=`${myHour}:${myMinute}`;
+    return {myNewTime,timeIndicator};
 }
 
 
-export {fetchData,getCurrentDayInfo};
+export {fetchData,getCurrentDayInfo,timeFormatter};
