@@ -39,9 +39,9 @@ function importDataToDom(data){
     let topLeftTemp=document.querySelector('.top-left>.temp-container>.temp');
     let topLeftAddress=document.querySelector('.top-left>.location-container>.location');
     let topLeftDate=document.querySelector('.top-left>.location-container>.date');
-    let topRightTime=document.querySelector('.top-right>.time');
+    let topRightTime=document.querySelector('.top-right>.time-img>.time');
     let topRightCondition=document.querySelector('.top-right>.condition');
-    let topRightImage=document.querySelector('.top-right>.img-container');
+    let topRightImage=document.querySelector('.top-right>.time-img>.img-container');
 
     
     //The currentDay and currentDayMonthYear variables is getting the date, month and year in a convenient format
@@ -184,9 +184,9 @@ function clearPreviousContents(){
     let topLeftTemp=document.querySelector('.top-left>.temp-container>.temp');
     let topLeftAddress=document.querySelector('.top-left>.location-container>.location');
     let topLeftDate=document.querySelector('.top-left>.location-container>.date');
-    let topRightTime=document.querySelector('.top-right>.time');
+    let topRightTime=document.querySelector('.top-right>.time-img>.time');
     let topRightCondition=document.querySelector('.top-right>.condition');
-    let topRightImage=document.querySelector('.top-right>.img-container');
+    let topRightImage=document.querySelector('.top-right>.time-img>.img-container');
     let bottomDivContainers=document.querySelectorAll('.today-info>.bottom>div');
 
     topLeftTemp.innerHTML='';

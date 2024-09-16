@@ -3,7 +3,7 @@ import {fetchData,timeFormatter} from './fetch.js';
 import {loadHeaderImage,checkCurrentScale,clearPreviousContents} from './DOM.js';
 
 loadHeaderImage();
-// console.log(timeFormatter('13:30:00'));
+fetchData("Asmara");
 
 document.querySelector('#my-form').addEventListener('submit',()=>{
     const userInput=document.querySelector('#city').value;

@@ -2,12 +2,22 @@ import {importDataToDom} from './DOM.js';
 
 async function fetchData(city){
     try{
+        let loadingDialog=document.querySelector('#loading-dialog');
+        loadingDialog.showModal();
         let response=await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(city)}?unitGroup=metric&key=VFS2WWLFWATZWDP439374ZTZY&contentType=json`,{mode:'cors'});
         let data=await response.json();
         importDataToDom(data);
+        loadingDialog.close();
     }
     catch(err){
-
+        let errorDialog=document.querySelector('#error-dialog');
+        let errorText=document.querySelector('#error-dialog>p');
+        errorText.textContent=`${err}`;
+        errorDialog.showModal();
+        setTimeout(()=>{
+            errorDialog.close();
+        },3000);
+        fetchData('Asmara');
     }
 }
 
