@@ -16,7 +16,7 @@ async function fetchData(city){
         errorDialog.showModal();
         setTimeout(()=>{
             errorDialog.close();
-        },3000);
+        },5000);
         fetchData('Asmara');
     }
 }

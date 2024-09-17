@@ -16,7 +16,6 @@
 }
 body{
     font-family:'myFont2';
-    
 }
 .content>.header{
     display:flex;
@@ -188,7 +187,7 @@ body{
 .content>.body>.weekly-info>div>.date,.weekly-info>div>.temp,.content>.body>.weekly-info>div>.rain-percent-container
 ,.content>.body>.weekly-info>div>.img-container{
     width:160px;
-    text-align: center;
+    text-align: start;
 }
 .body>.weekly-info>div>.rain-percent-container{
     display:flex;
@@ -208,6 +207,7 @@ body{
     position:absolute;
     top:400px;
     left:300px;
+    border:1px solid black;
 }
 .content>.body>#loading-dialog{
     padding:2rem 3rem;
@@ -226,4 +226,121 @@ footer{
 }
 footer>span{
     padding-left:1.5rem;
+}
+@media(max-width:700px){
+    .content{
+        width:100%;
+    }
+    .content>.header>.img-container>img{
+        width:80px;
+        height:80px;
+    }
+    .content>.header>h2{
+        font-size:1.8rem;
+    }
+    .content>.body>.user-selection{
+        font-size:1rem;
+    }
+    .content>.body>.today-info{
+        background: whitesmoke;
+        width:300px;
+        height:200px;
+        display:grid;
+        grid-template-rows: 90px 90px;
+        gap:1.2rem;
+    }
+    .body>.today-info>.top-left{
+        width:120px;
+        padding-left:1rem;
+    }
+    .today-info>.top-left>.temp-container>.temp{
+        font-size:1.8rem;
+    }
+    .body>.today-info>.top-left>.location-container>.location,.top-left>.location-container>.date{
+        font-size:0.6rem;
+    }
+    .body>.today-info>.top-right>.time-img>.time{
+        font-size:1rem;
+        margin-left:0.5rem;
+    }
+    .body>.today-info>.top-right .img-container>img{
+        width:60px;
+        height:60px;
+    }
+    .body>.today-info>.top-right>.condition{
+        font-size:1rem;
+        padding-left:0.8rem;
+    }
+    .content>.body>.today-info>.bottom>div>.temp{
+        font-size:0.8rem;
+        margin-bottom:0.2rem;
+    }
+    .content>.body>.today-info>.bottom>div>.time{
+        font-size:0.8rem;
+        padding-left:0.4rem;
+    }
+    .content>.body>.today-info>.bottom>div>.time-indicator{
+        padding-left:0.5rem;
+        font-size:0.8rem;
+    }
+    .content>.body>.today-info>.bottom>div>.img-container>img{
+        width:40px;
+        height:40px;
+        margin-bottom:0.2rem;
+    }
+    .content>.body>.weekly-info{
+        width:300px;
+        height:250px;
+        flex-direction:column;
+        padding:1rem 0.3rem;
+    }
+    .content>.body>.weekly-info>div{
+        height:40px;
+        font-size:0.8rem;
+    }
+    .content>.body>.weekly-info>div>.date{
+        width:100px;
+    }
+    .weekly-info>div>.temp,.content>.body>.weekly-info>div>.rain-percent-container
+    ,.content>.body>.weekly-info>div>.img-container{
+        width:48px;
+    }
+    .body>.weekly-info>div>.temp{
+        width:60px;
+    }
+    .content>.body>.weekly-info>div>.date,.body>.weekly-info>div .rain-percent,.body>.weekly-info>div>.temp{
+        padding-top:0.5rem;
+    }
+    .body>.weekly-info>div .water-drop>img{
+        padding-top:0.6rem;
+    }
+    .body>.weekly-info>div .water-drop>img{
+        width:15px;
+        height:15px;
+    }
+    .content>.body>.weekly-info>div>.img-container>img{
+        width:40px;
+        height:40px;
+    }
+    .content>.body>#error-dialog{
+        padding:1rem 0.2rem;
+        font-size:1rem;
+        position:absolute;
+        top:30%;
+        left:10%;
+        width:280px;
+    }
+    .content>.body>#loading-dialog{
+        padding:1rem 2rem;
+        font-size:1rem;
+        position:absolute;
+        top:30%;
+        left:35%;
+    }
+    footer{
+        font-size:0.7rem
+    }
+    footer>span{
+        display:block;
+    }
 }
