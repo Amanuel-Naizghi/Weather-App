@@ -5,7 +5,7 @@ async function fetchData(city) {
     const loadingDialog = document.querySelector('#loading-dialog');
     loadingDialog.showModal();
     const response = await fetch(
-      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(city)}?unitGroup=metric&key=VFS2WWLFWATZWDP439374ZTZY&contentType=json`,
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=VFS2WWLFWATZWDP439374ZTZY&contentType=json`,
       { mode: 'cors' },
     );
     const data = await response.json();
