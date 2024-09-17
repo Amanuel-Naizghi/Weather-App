@@ -1,11 +1,12 @@
 import { importDataToDom } from './DOM.js';
 
 async function fetchData(city) {
+  let myKey='VFS2WWLFWATZWDP439374ZTZY';
   try {
     const loadingDialog = document.querySelector('#loading-dialog');
     loadingDialog.showModal();
     const response = await fetch(
-      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=VFS2WWLFWATZWDP439374ZTZY&contentType=json`,
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${myKey}&contentType=json`,
       { mode: 'cors' },
     );
     const data = await response.json();
