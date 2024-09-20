@@ -7,6 +7,7 @@ import {
 } from './DOM.js';
 
 loadHeaderImage();
+document.querySelector('#city').value='Asmara';
 fetchData('Asmara');
 
 document.querySelector('#my-form').addEventListener('submit', () => {
